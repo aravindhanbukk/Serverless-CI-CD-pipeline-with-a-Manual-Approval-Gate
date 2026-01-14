@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+  pre_build:
+    commands:
+      - echo "Checking files..."
+  build:
+    commands:
+      - echo "Build started on `date`"
+      - echo "Minifying assets or running security scans here..."
+  post_build:
+    commands:
+      - echo "Build completed!"
+
+artifacts:
+  files:
+    - index.html
